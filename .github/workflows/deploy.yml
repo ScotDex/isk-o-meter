@@ -15,8 +15,9 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PASSWORD }}
+          password: ${{ secrets.PASSWORD }}
           script: |
-            cd /opt/isk-o-meter
+            cd ..
+            cd /isk-o-meter
             git pull origin main
             docker compose up -d --build
