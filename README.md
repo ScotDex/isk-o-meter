@@ -7,7 +7,7 @@ Because apparently, opening a browser to check EVE market prices is "too much wo
 ## 🛠 The "How it Works" Part
 I built this using a "modern" stack, which is mostly just a fancy way of saying I spent three hours fighting with Docker so you don't have to.
 
-{Visual Representation](https://github.com/ScotDex/isk-o-meter/wiki/Action-Shot)
+[Visual Representation](https://github.com/ScotDex/isk-o-meter/wiki/Action-Shot)
 
 * **Language:** **Node.js v25** (The bleeding edge, because I like living dangerously).
 * **Library:** **Discord.js v14** (The industry standard for making bots that people eventually ignore).
