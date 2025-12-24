@@ -17,7 +17,7 @@ const commands = [
 (async () => {
     // This pushes the command ONLY to your test server instantly
     await rest.put(
-        Routes.applicationGuildCommands('1452684394740580362', '790348216587255808'), 
+        Routes.applicationCommands(clientId), 
         { body: commands }
     );
     console.log('Command registered locally!');
