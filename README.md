@@ -7,6 +7,8 @@ Because apparently, opening a browser to check EVE market prices is "too much wo
 ## 🛠 The "How it Works" Part
 I built this using a "modern" stack, which is mostly just a fancy way of saying I spent three hours fighting with Docker so you don't have to.
 
+{Visual Representation](https://github.com/ScotDex/isk-o-meter/wiki/Action-Shot)
+
 * **Language:** **Node.js v25** (The bleeding edge, because I like living dangerously).
 * **Library:** **Discord.js v14** (The industry standard for making bots that people eventually ignore).
 * **Data Source:** **ESI (EVE Swagger Interface)**. If the prices are wrong, blame CCP, not me.
@@ -18,7 +20,7 @@ I've stripped this down to the bare minimum because I don't want your server's a
 | Permission | Why? |
 | :--- | :--- |
 | `Send Messages` | Otherwise, it’s just a very quiet bot staring at you. |
-| `Embed Links` | The market data looks like hot garbage in plain text. This makes it pretty. |
+| `Embed Links` | The market data looks like a steaming pile of shite in plain text. This makes it pretty. |
 | `Use Slash Commands` | Because prefix commands (like `!price`) are officially dead. |
 
 ## ⚖️ License
