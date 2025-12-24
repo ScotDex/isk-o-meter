@@ -7,6 +7,17 @@ Because apparently, opening a browser to check EVE market prices is "too much wo
 ## 🛠 The "How it Works" Part
 I built this using a "modern" stack, which is mostly just a fancy way of saying I spent three hours fighting with Docker so you don't have to.
 
+## 📉 The "Philosophy" (Or: Why it’s so small)
+
+Most Discord bots are bloated, over-engineered nightmares that try to be a zkill bot, music player, and a redit RSS at the same time. This is not that. 
+
+ISK-O-Meter is a **dedicated microservice** because:
+- **I’m cheap:** It runs on a fraction of a CPU core. I’m not subsidizing your market research with a $40/month server.
+- **YAGNI (You Ain't Gonna Need It):** It does exactly one thing: gets EVE prices. It doesn't have "levels," it doesn't "rank" your corp members, and it won't play lo-fi beats.
+- **Micro-Stack:** It’s a Node.js process in a tiny Linux container. If it breaks, I fix one file. If you want more features, go buy a second monitor and open a spreadsheet.
+
+In short: It’s small because it’s finished.
+
 [Visual Representation](https://github.com/ScotDex/isk-o-meter/wiki/Action-Shot)
 
 * **Language:** **Node.js v25** (The bleeding edge, because I like living dangerously).
