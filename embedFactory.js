@@ -38,13 +38,13 @@ function createMarketEmbed(itemName, typeId, results){
 function createHelpEmbed() {
     return new EmbedBuilder()
         .setColor(0x0099FF)
-        .setTitle('📖 ISK-O-Meter: User Manual')
-        .setDescription('I look at the markets so you dont have too')
+        .setTitle('📖 ISK-O-Meter Helpdesk')
+        .setDescription('I check the markets, so you dont have too!')
         .setThumbnail('https://images.evetech.net/corporations/1000132/logo?size=64')
         .addFields(
             { 
                 name: '📊 Checking Prices', 
-                value: 'Use `/price [Item Name]` (no brackets) to see current rates across major trade hubs (Jita, Amarr, Dodixie, etc.)' 
+                value: '`/price [item]` — Hub rates for Jita, Amarr, & Dodixie.\n\n*Note: PLEX is excluded. Its a Global Market now; arbitrage is dead. Check your Vault.*' 
             },
                         { 
                 name: '🔗 Useful Links', 
