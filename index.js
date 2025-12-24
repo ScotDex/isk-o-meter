@@ -1,6 +1,6 @@
 const { Client, GatewayIntentBits } = require(`discord.js`);
 const { HUBS, getTypeId, fetchHubPrice } = require(`./market.js`);
-const { createMarketEmbed } = require('./embedFactory.js'); // Make sure the filename matches!
+const { createMarketEmbed } = require('./embedFactory.js'); 
 require('dotenv').config();
 
 const client = new Client({ 
@@ -34,7 +34,6 @@ client.on(`interactionCreate`, async (interaction)  => {
     else if (commandName === `help`) {
         const { createHelpEmbed } = require('./embedFactory.js');
         const embed = createHelpEmbed();
-        // Ephemeral means only the user who typed the command sees it
         await interaction.reply({ embeds: [embed], ephemeral: true });
     }
 });
