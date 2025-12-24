@@ -1,0 +1,9 @@
+services:
+  eve-bot:
+    build: .
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 128M  # Hard cap on RAM
+          cpus: '0.10'   # Only use 10% of one CPU core
