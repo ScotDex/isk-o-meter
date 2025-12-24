@@ -1,0 +1,22 @@
+name: Deploy ISK-O-Meter
+on:
+  push:
+    branches: [ main ]  # Triggers every time you push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Droplet via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PASSWORD }}
+          script: |
+            cd /opt/isk-o-meter
+            git pull origin main
+            docker compose up -d --build
