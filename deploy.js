@@ -1,5 +1,6 @@
 require('dotenv').config();
 const { REST, Routes, SlashCommandBuilder } = require('discord.js');
+const clientId = process.env.CLIENT_ID;
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
 const commands = [
