@@ -2,7 +2,7 @@
 
 Because apparently, opening a browser to check EVE market prices is "too much work" for my corporation members. This bot fetches real-time EVE Online market data and dumps it into Discord so you can get back to losing your ships in low-sec.
 
-[Invite ISK-O-Meter to your server!](https://discord.com/oauth2/authorize?client_id=1452684394740580362&permissions=346112&integration_type=0&scope=bot)
+[Invite ISK-O-Meter to your server!]([https://discord.com/oauth2/authorize?client_id=1452684394740580362&permissions=346112&integration_type=0&scope=bot](https://discord.com/oauth2/authorize?client_id=1452684394740580362&permissions=2147764224&integration_type=0&scope=bot+applications.commands))
 
 ## 🛠 The "How it Works" Part
 I built this using a "modern" stack, which is mostly just a fancy way of saying I spent three hours fighting with Docker so you don't have to.
