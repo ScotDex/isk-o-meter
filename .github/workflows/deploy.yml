@@ -1,7 +1,7 @@
 name: Deploy ISK-O-Meter
 on:
   push:
-    branches: [ main ]  # Triggers every time you push to the main branch
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -17,7 +17,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
+            
+            set -e
             cd ..
             cd /isk-o-meter
-            git pull origin main
             docker compose up -d --build

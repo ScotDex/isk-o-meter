@@ -18,7 +18,7 @@ ISK-O-Meter is a **dedicated microservice** because:
 
 In short: It’s small because it’s finished.
 
-[Visual Representation](https://github.com/ScotDex/isk-o-meter/wiki/Action-Shot)
+[Visual Representation](https://github.com/ScotDex/isk-o-meter/wiki))
 
 * **Language:** **Node.js v25** (The bleeding edge, because I like living dangerously).
 * **Library:** **Discord.js v14** (The industry standard for making bots that people eventually ignore).
@@ -35,7 +35,7 @@ I've stripped this down to the bare minimum because I don't want your server's a
 | `Use Slash Commands` | Because prefix commands (like `!price`) are officially dead. |
 
 ## ⚖️ License
-This project is licensed under the **GNU GENERAL PUBLIC LICENSE**. Basically: do whatever you want with it, but don't sue me if it blows up your ship or your server. See the [LICENSE](LICENSE) file for the boring legal details.
+This project is licensed under the **GNU GENERAL PUBLIC LICENSE**. Basically: do whatever you want with it, but don't moan at me if it blows up your ship or your server. See the [LICENSE](LICENSE) file for the boring legal details.
 
 ## 🙄 Disclaimer
 I am not responsible for lost ISK, bad trades, or your ship exploding because you were checking prices instead of local. Fly safe. Or don't. I'm a bot, not your mother.
