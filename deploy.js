@@ -1,4 +1,5 @@
 require('dotenv').config();
+console.log("DEBUG: Token length is:", process.env.DISCORD_TOKEN?.length || "UNDEFINED");
 const { REST, Routes, SlashCommandBuilder } = require('discord.js');
 
 // 1. You MUST define clientId from your .env file

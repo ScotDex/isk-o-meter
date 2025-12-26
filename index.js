@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, GatewayIntentBits } = require(`discord.js`);
 const { HUBS, getTypeId, fetchHubPrice } = require(`./market.js`);
 const { createMarketEmbed } = require('./embedFactory.js'); 
