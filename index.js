@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Client, GatewayIntentBits } = require(`discord.js`);
 const { HUBS, getTypeId, fetchHubPrice } = require(`./market.js`);
 const { createMarketEmbed } = require('./embedFactory.js'); 
-require('dotenv').config();
+
 
 const client = new Client({ 
     intents: [GatewayIntentBits.Guilds] 
@@ -10,6 +10,8 @@ const client = new Client({
 
 client.on(`interactionCreate`, async (interaction)  => {
     if (!interaction.isChatInputCommand()) return;
+
+    const { commandName } = interaction;
 
     if (interaction.commandName === `price`) {
         const itemName = interaction.options.getString(`item`);
