@@ -21,4 +21,5 @@ jobs:
             set -e
             cd ..
             cd /isk-o-meter
+            git pull origin main
             docker compose up -d --build
