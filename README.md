@@ -18,7 +18,7 @@ ISK-O-Meter is a **dedicated microservice** because:
 
 In short: It’s small because it’s finished.
 
-[Visual Representation](https://github.com/ScotDex/isk-o-meter/wiki/Action-Shot)
+[Visual Representation](https://github.com/ScotDex/isk-o-meter/wiki))
 
 * **Language:** **Node.js v25** (The bleeding edge, because I like living dangerously).
 * **Library:** **Discord.js v14** (The industry standard for making bots that people eventually ignore).
