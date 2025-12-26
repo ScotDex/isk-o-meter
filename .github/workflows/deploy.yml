@@ -21,6 +21,4 @@ jobs:
             set -e
             cd ..
             cd /isk-o-meter
-            git fetch origin main
-            git reset --hard origin/main
             docker compose up -d --build
