@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-// 1. Define our Hubs (Region IDs)
+// Define Region Hubs
 const HUBS = [
     { name: 'Jita', region: 10000002 },
     { name: 'Amarr', region: 10000043 },
@@ -10,7 +10,7 @@ const HUBS = [
 ];
 
 /**
- * Step A: Resolve the Item Name to a Type ID
+ * Type ID resolution 
  */
 async function getTypeId(itemName) {
     console.log(`Searching for ID for: ${itemName}...`);
@@ -77,9 +77,10 @@ async function fetchHubPrice(hub, typeId) {
     }
 }
 
-// At the bottom of market.js
+
 module.exports = {
     HUBS,
     getTypeId,
     fetchHubPrice
+
 };
