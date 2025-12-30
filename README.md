@@ -9,7 +9,7 @@ I built this using a "modern" stack, which is mostly just a fancy way of saying 
 
 ## 📉 The "Philosophy" (Or: Why it’s so small)
 
-Most Discord bots are bloated, over-engineered nightmares that try to be a zkill bot, music player, and a redit RSS at the same time. This is not that. 
+Most Discord bots are bloated, over-engineered nightmares that try to be a killmail bot, redit tracker and music player at the same time. This is not that. 
 
 ISK-O-Meter is a **dedicated nanoservice** because:
 - **I’m cheap:** It runs on a fraction of a CPU core. I’m not subsidizing your market research with a £40/month server.
