@@ -8,6 +8,10 @@ const client = new Client({
     intents: [GatewayIntentBits.Guilds] 
 });
 
+client.once(`ready`, () => {
+    console.log(`Logged in as ${client.user.tag}`);
+});
+
 client.on(`interactionCreate`, async (interaction)  => {
     if (!interaction.isChatInputCommand()) return;
 
@@ -16,12 +20,17 @@ client.on(`interactionCreate`, async (interaction)  => {
     if (interaction.commandName === `price`) {
         const itemName = interaction.options.getString(`item`);
 
+        console.log(`[Command] ${interaction.user.tag} requested price for: ${itemName}`);
+
         await interaction.deferReply();
         try {
             const typeId = await getTypeId(itemName);
             if (!typeId) {
                 return interaction.editReply(`❌ Could not find an item named: **${itemName}**`);
             }
+
+            console.log(`[Market] Fetching prices for TypeID: ${typeId}...`);
+            
             const results = await Promise.all(HUBS.map(hub => fetchHubPrice(hub, typeId)));
             const embed = createMarketEmbed(itemName, typeId, results);
             await interaction.editReply({ embeds: [embed]});
@@ -43,4 +52,3 @@ client.on(`interactionCreate`, async (interaction)  => {
 
 client.login(process.env.DISCORD_TOKEN)
 
-// testing more workflow changes
