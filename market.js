@@ -67,29 +67,6 @@ async function getTypeId(itemName) {
 }
 
 /**
- * Step B: Fetch Market Data for a specific Hub
- */
-async function fetchSingleHub(hub, typeId) {
-    const url = `https://esi.evetech.net/latest/markets/${hub.region}/orders/`;
-    try {
-        const response = await axios.get(url, { params: { type_id: typeId } });
-        const orders = response.data;
-
-        // Separate Buy and Sell orders
-        const sellOrders = orders.filter(o => !o.is_buy_order);
-        const buyOrders = orders.filter(o => o.is_buy_order);
-
-        return {
-            hub: hub.name,
-            lowestSell: sellOrders.length ? Math.min(...sellOrders.map(o => o.price)) : "None",
-            highestBuy: buyOrders.length ? Math.max(...buyOrders.map(o => o.price)) : "None"
-        };
-    } catch (error) {
-        return { hub: hub.name, error: "API Timeout" };
-    }
-}
-
-/**
  * Step C: The "Main" function to run the logic
  */
 async function fetchHubPrice(hub, typeId) {
