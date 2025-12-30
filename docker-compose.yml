@@ -4,6 +4,8 @@ services:
     restart: always
     env_file:
       - .env
+    volumes:
+      - ./itemCache.json:/usr/src/app/itemCache.json
     deploy:
       resources:
         limits:
