@@ -44,14 +44,14 @@ function createHelpEmbed() {
         .addFields(
             { 
                 name: '📊 Checking Prices', 
-                value: '`/price [item]` — Hub rates for Jita, Amarr, & Dodixie.\n\n*Note: PLEX is excluded. Its a Global Market now; arbitrage is dead. Check your Vault.*' 
+                value: '`/price [item]` — Trade hub prices.\n\n*Note: PLEX is excluded. Its a Global Market now; arbitrage is dead. Check your Vault.*' 
             },
                         { 
                 name: '🔗 Useful Links', 
                 value: '[Source Code & Support](https://github.com/ScotDex)' 
             },
         )
-        .setFooter({ text: 'ISK-O-Meter | Numbers dont care about your feelings' })
+        .setFooter({ text: 'ISK-O-Meter | Fly Smart not Hopeful' })
         .setTimestamp();
 
 }
