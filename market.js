@@ -1,4 +1,26 @@
 const axios = require('axios');
+const fs = require(`fs`);
+const path = require(`path`);
+
+const CACHE_FILE = path.join(__dirname, `itemCache.json`)
+
+
+function loadCache() {
+    if (fs.existsSync(CACHE_FILE)) {
+        console.log("Loading Cache File");
+        const data = fs.readFileSync(CACHE_FILE, `utf8`);
+        return JSON.parse(data);
+    }
+    console.log("No cache file found, creating a new one")
+    return {};
+}
+
+function saveCache(cache) {
+    fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
+    console.log("[system] cache file updated");
+}
+
+let itemCache = loadCache();
 
 // Define Region Hubs
 const HUBS = [
@@ -13,6 +35,14 @@ const HUBS = [
  * Type ID resolution 
  */
 async function getTypeId(itemName) {
+
+    const nameKey = itemName.toLowerCase();
+
+    if (itemCache[nameKey]) {
+        console.log(`[Cache Hit] Found ${itemName} (ID: ${itemCache[nameKey]}) in local file.`);
+        return itemCache[nameKey];
+    }
+    console.log(`[Cache Miss] ${itemName} not known. Asking ESI...`);
     console.log(`Searching for ID for: ${itemName}...`);
     try {
         // We use the ESI universe/ids endpoint
@@ -20,8 +50,15 @@ async function getTypeId(itemName) {
         
         // ESI returns an object. We look inside 'inventory_types'
         if (response.data.inventory_types && response.data.inventory_types.length > 0) {
-            return response.data.inventory_types[0].id;
+            const id = response.data.inventory_types[0].id;
+            const officialName = response.data.inventory_types[0].name;
+
+            itemCache[nameKey] = id;
+            saveCache(itemCache);
+            console.log(`[Cache Update] Added ${officialName} to local SDE.`);
+            return id;
         }
+
         return null;
     } catch (error) {
         console.error("ID Search Error:", error.message);
@@ -76,7 +113,6 @@ async function fetchHubPrice(hub, typeId) {
         return { hub: hub.name, lowestSell: "Err", highestBuy: "Err" };
     }
 }
-
 
 module.exports = {
     HUBS,
