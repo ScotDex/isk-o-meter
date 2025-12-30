@@ -38,8 +38,8 @@ function createMarketEmbed(itemName, typeId, results){
 function createHelpEmbed() {
     return new EmbedBuilder()
         .setColor(0x0099FF)
-        .setTitle('📖 ISK-O-Meter Helpdesk')
-        .setDescription('I check the markets, so you dont have too!')
+        .setTitle('📖 ISK-O-Meter')
+        .setDescription('Market prices without the guess work!')
         .setThumbnail('https://images.evetech.net/corporations/1000132/logo?size=64')
         .addFields(
             { 
@@ -51,7 +51,7 @@ function createHelpEmbed() {
                 value: '[Source Code & Support](https://github.com/ScotDex)' 
             },
         )
-        .setFooter({ text: 'ISK-O-Meter | Efficiency is Profit' })
+        .setFooter({ text: 'ISK-O-Meter | Numbers dont care about your feelings' })
         .setTimestamp();
 
 }
