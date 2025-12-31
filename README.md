@@ -28,5 +28,7 @@ In short: It’s small because it’s finished.
 ## ⚖️ License
 This project is licensed under the **GNU GENERAL PUBLIC LICENSE**. Basically: do whatever you want with it, but don't moan at me if it blows up your ship or your server. See the [LICENSE](LICENSE) file for the boring legal details.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X21RDFR0)
+
 ## 🙄 Disclaimer
 I am not responsible for lost ISK, bad trades, or your ship exploding because you were checking prices instead of local. Fly safe. Or don't. I'm a bot, not your mother.
